@@ -9,6 +9,8 @@
 import UIKit
 
 class  ProfileViewController: UIViewController {
+    
+    /*
     // Вносить изменения в UIView
     //Создаётся view   выше методов
     private let vi = ProfileHeaderView()
@@ -36,6 +38,6 @@ class  ProfileViewController: UIViewController {
         print(self.view.frame)
         print(vi.bounds)
     }
-   
+   */
 }
 
