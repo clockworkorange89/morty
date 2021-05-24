@@ -42,9 +42,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyC-sV-i4l" userLabel="fullNameLabel">
-                                        <rect key="frame" x="136" y="27" width="262" height="12"/>
+                                        <rect key="frame" x="136" y="27" width="262" height="20.333333333333329"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="12" id="7Mr-I5-kP7"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="5Bj-Vr-tVe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>

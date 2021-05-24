@@ -70,7 +70,7 @@ override func awakeFromNib() {
         setStatusButton.layer.cornerRadius = 15
         setStatusButton.layer.backgroundColor = .init(red: 0, green: 100, blue: 255, alpha: 2)
         setStatusButton.setTitleColor(.white, for: .normal)
-     
+        setStatusButton.addTarget(self, action: #selector(doOnButton), for: .touchUpInside)
         
      
         statusLabel.text = "Waiting for something..."
@@ -82,7 +82,18 @@ override func awakeFromNib() {
         statusTextField.font = UIFont(name: "regular", size: 15)
         statusTextField.layer.borderWidth = 1
         statusTextField.layer.backgroundColor = .init(red: 255, green: 255, blue: 255, alpha: 1)
+        statusTextField.addTarget(self, action: #selector(statusTextChanged), for: .editingChanged)
   
   }
+    
+    @objc func doOnButton(){
+        print(statusLabel.text!)
+        statusLabel.text = statusText
+    }
+    
+    
+    @objc func statusTextChanged(_ textField: UITextField){
+        statusText = textField.text ?? "empty"
+    }
 
 }
