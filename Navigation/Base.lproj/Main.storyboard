@@ -17,21 +17,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxh-mX-Xkm">
-                                <rect key="frame" x="0.0" y="307" width="414" height="220"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxh-mX-Xkm" customClass="ProfileHeaderView" customModule="Navigation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="220"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofj-GD-URI" userLabel="statusLabel">
+                                        <rect key="frame" x="136" y="77.666666666666657" width="262" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsR-8X-vVv" userLabel="setStatusButton">
+                                        <rect key="frame" x="16" y="132" width="382" height="50"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="vTu-Ee-N5I"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="morty" translatesAutoresizingMaskIntoConstraints="NO" id="Xi9-FM-D84" userLabel="avatarImageView">
+                                        <rect key="frame" x="16" y="16" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="aHs-ih-k1G"/>
+                                            <constraint firstAttribute="width" constant="100" id="emn-o4-dTE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyC-sV-i4l" userLabel="fullNameLabel">
+                                        <rect key="frame" x="136" y="27" width="262" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="7Mr-I5-kP7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XfA-lX-BME" userLabel="statusTextField">
+                                        <rect key="frame" x="136" y="92" width="262" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="6yb-yN-6gF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="eMC-j9-Oao"/>
+                                    <constraint firstAttribute="height" constant="220" id="2Wm-b3-zFc"/>
+                                    <constraint firstAttribute="trailing" secondItem="ofj-GD-URI" secondAttribute="trailing" constant="16" id="4Db-gm-VR7"/>
+                                    <constraint firstItem="PsR-8X-vVv" firstAttribute="top" secondItem="ofj-GD-URI" secondAttribute="bottom" constant="34" id="4od-cS-362"/>
+                                    <constraint firstItem="DyC-sV-i4l" firstAttribute="leading" secondItem="Xi9-FM-D84" secondAttribute="trailing" constant="20" id="BeK-va-xSL"/>
+                                    <constraint firstAttribute="trailing" secondItem="XfA-lX-BME" secondAttribute="trailing" constant="16" id="CwW-Tv-2wJ"/>
+                                    <constraint firstItem="XfA-lX-BME" firstAttribute="leading" secondItem="Xi9-FM-D84" secondAttribute="trailing" constant="20" id="HDZ-gD-uaq"/>
+                                    <constraint firstItem="PsR-8X-vVv" firstAttribute="top" secondItem="Xi9-FM-D84" secondAttribute="bottom" constant="16" id="NyR-t6-E2h"/>
+                                    <constraint firstItem="ofj-GD-URI" firstAttribute="leading" secondItem="Xi9-FM-D84" secondAttribute="trailing" constant="20" id="OQc-G7-Q0f"/>
+                                    <constraint firstItem="DyC-sV-i4l" firstAttribute="top" secondItem="gxh-mX-Xkm" secondAttribute="top" constant="27" id="XE1-Ol-lxI"/>
+                                    <constraint firstItem="PsR-8X-vVv" firstAttribute="leading" secondItem="gxh-mX-Xkm" secondAttribute="leading" constant="16" id="gNQ-7r-lco"/>
+                                    <constraint firstItem="Xi9-FM-D84" firstAttribute="leading" secondItem="gxh-mX-Xkm" secondAttribute="leading" constant="16" id="mJx-Jp-uTC"/>
+                                    <constraint firstAttribute="trailing" secondItem="PsR-8X-vVv" secondAttribute="trailing" constant="16" id="tQg-i7-OJO"/>
+                                    <constraint firstItem="Xi9-FM-D84" firstAttribute="top" secondItem="gxh-mX-Xkm" secondAttribute="top" constant="16" id="u0i-vA-Z4g"/>
+                                    <constraint firstAttribute="trailing" secondItem="DyC-sV-i4l" secondAttribute="trailing" constant="16" id="xJs-th-TWJ"/>
+                                    <constraint firstItem="PsR-8X-vVv" firstAttribute="top" secondItem="XfA-lX-BME" secondAttribute="bottom" id="yeV-TD-iFM"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="Xi9-FM-D84" id="Bgf-wh-wO6"/>
+                                    <outlet property="fullNameLabel" destination="DyC-sV-i4l" id="aj2-ht-5WW"/>
+                                    <outlet property="setStatusButton" destination="PsR-8X-vVv" id="jP6-pJ-jac"/>
+                                    <outlet property="statusLabel" destination="ofj-GD-URI" id="nYz-wb-CgX"/>
+                                    <outlet property="statusTextField" destination="XfA-lX-BME" id="rMe-oN-kLT"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FCL-IZ-fe8"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="gxh-mX-Xkm" firstAttribute="top" secondItem="FCL-IZ-fe8" secondAttribute="top" constant="219" id="aLA-NV-D5X"/>
-                            <constraint firstItem="gxh-mX-Xkm" firstAttribute="leading" secondItem="FCL-IZ-fe8" secondAttribute="leading" id="biL-fZ-Zbm"/>
-                            <constraint firstItem="FCL-IZ-fe8" firstAttribute="trailing" secondItem="gxh-mX-Xkm" secondAttribute="trailing" id="uUQ-3a-56f"/>
+                            <constraint firstItem="gxh-mX-Xkm" firstAttribute="leading" secondItem="FCL-IZ-fe8" secondAttribute="leading" id="2ru-jW-NWV"/>
+                            <constraint firstItem="gxh-mX-Xkm" firstAttribute="top" secondItem="FCL-IZ-fe8" secondAttribute="top" id="9bK-y6-vA1"/>
+                            <constraint firstItem="gxh-mX-Xkm" firstAttribute="trailing" secondItem="FCL-IZ-fe8" secondAttribute="trailing" id="v3T-e9-PMN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="TPi-FS-zh0"/>
@@ -182,7 +243,11 @@
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="morty" width="145" height="173"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
