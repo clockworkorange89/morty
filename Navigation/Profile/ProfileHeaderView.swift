@@ -46,8 +46,8 @@ override func awakeFromNib() {
         fatalError("init(coder:) has not been implemented")
     }
     
-    */
-
+*/
+    
 
     override func layoutSubviews() {
          addSubview(newButton)
