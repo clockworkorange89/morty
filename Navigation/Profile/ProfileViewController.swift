@@ -10,7 +10,7 @@ import UIKit
 
 class  ProfileViewController: UIViewController {
     
-    //@IBOutlet weak var vi: ProfileHeaderView!
+   // @IBOutlet weak var myViev: ProfileHeaderView!
     /*
     // Вносить изменения в UIView
     //Создаётся view   выше методов

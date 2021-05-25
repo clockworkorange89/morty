@@ -10,7 +10,7 @@ import UIKit
 
 class  ProfileHeaderView: UIView {
   
-   
+    
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
@@ -18,14 +18,24 @@ class  ProfileHeaderView: UIView {
     @IBOutlet weak var statusTextField: UITextField!
     
     @IBOutlet weak var setStatusButton: UIButton!
+    private var  statusText  = ""
+    private(set) lazy var newButton: UIButton = {
+        let newButton = UIButton()
+        newButton.backgroundColor = .red
+        newButton.setTitle("Push", for: .normal)
+        return newButton
+    }()
+    
+    
     
 override func awakeFromNib() {
     configurationFrames()
-       
+   
+    
     }
     
 
-  private var  statusText  = ""
+
  /*
     override init(frame:CGRect){
         super.init(frame:frame)
@@ -35,19 +45,19 @@ override func awakeFromNib() {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     */
-    /*
-    func setupUI() {
-        // создание элементов во view
-        addSubview(image)
-        addSubview(name)
-        addSubview(status)
-        addSubview(myButton)
-        addSubview(addText)
-    }
- */
+
+
     override func layoutSubviews() {
-       // configurationFrames()
+         addSubview(newButton)
+        newButton.translatesAutoresizingMaskIntoConstraints = false
+        newButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+         newButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        newButton.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor , constant: 0).isActive = true
+        newButton.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 0).isActive = true
+       // newButton.bottomAnchor.constraint(equalTo: ProfileHeaderView.safe, constant: 1)
+        newButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     
     func configurationFrames() {
@@ -68,7 +78,7 @@ override func awakeFromNib() {
         setStatusButton.setTitle("Show status", for: .normal)
         setStatusButton.layer.cornerRadius = 4
         setStatusButton.layer.cornerRadius = 15
-        setStatusButton.layer.backgroundColor = .init(red: 0, green: 100, blue: 255, alpha: 2)
+        setStatusButton.backgroundColor = .blue
         setStatusButton.setTitleColor(.white, for: .normal)
         setStatusButton.addTarget(self, action: #selector(doOnButton), for: .touchUpInside)
         
@@ -95,5 +105,6 @@ override func awakeFromNib() {
     @objc func statusTextChanged(_ textField: UITextField){
         statusText = textField.text ?? "empty"
     }
-
+    
+  
 }
