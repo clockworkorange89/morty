@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofj-GD-URI" userLabel="statusLabel">
-                                        <rect key="frame" x="136" y="77.666666666666657" width="262" height="20.333333333333329"/>
+                                        <rect key="frame" x="136" y="72.333333333333343" width="262" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -64,12 +64,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="2Wm-b3-zFc"/>
                                     <constraint firstAttribute="trailing" secondItem="ofj-GD-URI" secondAttribute="trailing" constant="16" id="4Db-gm-VR7"/>
-                                    <constraint firstItem="PsR-8X-vVv" firstAttribute="top" secondItem="ofj-GD-URI" secondAttribute="bottom" constant="34" id="4od-cS-362"/>
                                     <constraint firstItem="DyC-sV-i4l" firstAttribute="leading" secondItem="Xi9-FM-D84" secondAttribute="trailing" constant="20" id="BeK-va-xSL"/>
                                     <constraint firstAttribute="trailing" secondItem="XfA-lX-BME" secondAttribute="trailing" constant="16" id="CwW-Tv-2wJ"/>
                                     <constraint firstItem="XfA-lX-BME" firstAttribute="leading" secondItem="Xi9-FM-D84" secondAttribute="trailing" constant="20" id="HDZ-gD-uaq"/>
                                     <constraint firstItem="PsR-8X-vVv" firstAttribute="top" secondItem="Xi9-FM-D84" secondAttribute="bottom" constant="16" id="NyR-t6-E2h"/>
                                     <constraint firstItem="ofj-GD-URI" firstAttribute="leading" secondItem="Xi9-FM-D84" secondAttribute="trailing" constant="20" id="OQc-G7-Q0f"/>
+                                    <constraint firstItem="ofj-GD-URI" firstAttribute="top" secondItem="DyC-sV-i4l" secondAttribute="bottom" constant="25" id="Tmy-Jn-zlf"/>
                                     <constraint firstItem="DyC-sV-i4l" firstAttribute="top" secondItem="gxh-mX-Xkm" secondAttribute="top" constant="27" id="XE1-Ol-lxI"/>
                                     <constraint firstItem="PsR-8X-vVv" firstAttribute="leading" secondItem="gxh-mX-Xkm" secondAttribute="leading" constant="16" id="gNQ-7r-lco"/>
                                     <constraint firstItem="Xi9-FM-D84" firstAttribute="leading" secondItem="gxh-mX-Xkm" secondAttribute="leading" constant="16" id="mJx-Jp-uTC"/>
